@@ -1,0 +1,694 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Matrix</title>
+  <meta name="description" content="The CryptoCurrency Certification Consortium (C4) establishes cryptocurrency standards that help ensure a balance of openness &amp; privacy, security &amp; usability, and trust &amp; decentralization.
+">
+
+  <link rel="stylesheet" href="/CCSS/css/main.css">
+  <link rel="canonical" href="https://cryptoconsortium.github.io/CCSS/Matrix/">
+  <link rel="alternate" type="application/rss+xml" title="CCSS" href="https://cryptoconsortium.github.io/CCSS/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+  <img src='/CCSS/images/CCSS_Logo_Color_Dark.png' class='logo' /> 
+
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+	<a class="page-link" href="/CCSS/">CCSS</a>
+        
+          
+          <a class="page-link" href="/CCSS/Details/">Details</a>
+          
+        
+          
+          <a class="page-link" href="/CCSS/Matrix/">Matrix</a>
+          
+        
+          
+          <a class="page-link" href="/CCSS/Checklist/">Checklist</a>
+          
+        
+          
+          <a class="page-link" href="/CCSS/License/">License</a>
+          
+        
+          
+          <a class="page-link" href="/CCSS/ChangeLog/">ChangeLog</a>
+          
+        
+          
+          <a class="page-link" href="/CCSS/Definitions/">Definitions</a>
+          
+        
+          
+          <a class="page-link" href="/CCSS/Caveats/">Caveats</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        
+
+
+
+
+<div class="home">
+
+  <ul class="matrix">
+
+  <table>
+    <colgroup>
+      <col style="width:100px">
+      <col style="width:150px">
+      <col style="width:300px">
+      <col style="width:300px">
+      <col style="width:300px">
+      <col style="width:300px">
+      <col style="width:300px">
+    </colgroup>
+    <thead>
+      <tr>
+        <th id='header_category'>Category</th>
+        <th id='header_aspect'>Aspect</th>
+        <th id='header_component'>Component</th>
+        <th id='header_uncertifiable'>Uncertified</th>
+        <th id='header_level_i'><img src="/CCSS/images/CCSS_1_Color_Dark.png" alt="Level I" width="250"/></th>
+        <th id='header_level_ii'><img src="/CCSS/images/CCSS_2_Color_Dark.png" alt="Level II" width="250"/></th>
+        <th id='header_level_iii'><img src="/CCSS/images/CCSS_3_Color_Dark.png" alt="Level III" width="250"/></th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        
+        <tr>
+          
+
+          
+            
+            
+
+            <td rowspan=29>Cryptographic Asset Management</li>
+
+          
+
+          <td rowspan=4>Key / Seed Generation</td>
+
+          
+            
+            <td>Operator-created Key / Seed</td>
+            <td>Keys/seeds are issued to the keyholder by another actor</td>
+            <td>Keys/seeds are created by the key/seed operator themselves</td>
+            <td>Keys/seeds are created by the key/seed operator themselves</td>
+            <td>Keys/seeds are created by the key/seed operator themselves</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Creation methodology is validated</td>
+            <td></td>
+            <td></td>
+            <td>Key/seed creation methodology is validated prior to use</td>
+            <td>Key/seed creation methodology is validated prior to use</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>DRBG Compliance</td>
+            <td>Keys / seeds are created with a non-compliant DRBG</td>
+            <td>Key/seed is created using a NIST SP 800-90A compliant DRBG</td>
+            <td>Key/seed is created using a NIST SP 800-90A compliant DRBG that has been seeded with a single cryptographically-secure sources of entropy</td>
+            <td>Key/seed is created using a NIST SP 800-90A compliant DRBG that has been seeded with multiple cryptographically-secure sources of entropy
+OR
+A NRBG that passes industry-standard statistical tests (DIEHARD, Crypt-X, NIST STS)
+</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Entropy Pool</td>
+            <td>Keys / seeds are created on system with insufficient entropy</td>
+            <td>Key/seed is created on a system with sufficient entropy</td>
+            <td>Key/seed is created on a system with sufficient entropy</td>
+            <td>Key/seed is created on a system with sufficient entropy</td>
+            </tr>
+            
+          
+
+        </tr>
+      
+        
+        <tr>
+          
+
+          
+
+          <td rowspan=6>Wallet Creation</td>
+
+          
+            
+            <td>Unique address per transaction</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Unique addresses are generated for every transaction</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Multiple keys for signing</td>
+            <td></td>
+            <td></td>
+            <td>Transactions require signatures from 2 or more keys</td>
+            <td>Transactions require signatures from 2 or more keys</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Redundant key for recovery</td>
+            <td></td>
+            <td></td>
+            <td>Redundant keys are assigned for recovery purposes (i.e. 2of3, 3of5, etc.)</td>
+            <td>Redundant keys are assigned for recovery purposes (i.e. 2of3, 3of5, etc.)</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Deterministic wallets</td>
+            <td></td>
+            <td></td>
+            <td>Addresses are assigned deterministically</td>
+            <td>Addresses are assigned deterministically</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Geographic distribution of keys</td>
+            <td></td>
+            <td></td>
+            <td>Keys are distributed across multiple separate locations</td>
+            <td>Keys are distributed across multiple separate locations</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Organizational distribution of keys</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Keys are distributed across multiple organizational entities</td>
+            </tr>
+            
+          
+
+        </tr>
+      
+        
+        <tr>
+          
+
+          
+
+          <td rowspan=6>Key Storage</td>
+
+          
+            
+            <td>Primary keys are stored encrypted</td>
+            <td>Keys/seeds are stored in plain text</td>
+            <td>Key/seed is stored with strong encryption</td>
+            <td>Key/seed is stored with strong encryption</td>
+            <td>Key/seed is stored with strong encryption</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Backup key exists</td>
+            <td>No key backups exist</td>
+            <td>Key/seed backup exists</td>
+            <td>Key/seed backup is stored in a separate location from primary key/seed</td>
+            <td>Key/seed backup is stored in a separate location from primary key/seed</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Backup key has environmental protection</td>
+            <td></td>
+            <td>Key/seed backup is protected from environmental damage</td>
+            <td>Key/seed backup is protected from environmental damage</td>
+            <td>Key/seed backup is protected from environmental damage including electromagnetic pulse</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Backup key is access-controlled</td>
+            <td></td>
+            <td>Key/seed backup is protected by access controls to prevent unauthorized access (i.e. safe/safe deposit box)</td>
+            <td>Key/seed backup is protected by access controls to prevent unauthorized access (i.e. safe/safe deposit box)</td>
+            <td>Key/seed backup is protected by access controls to prevent unauthorized access (i.e. safe/safe deposit box)</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Backup key has tamper-evident seal</td>
+            <td></td>
+            <td></td>
+            <td>Key/seed backup employs tamper-evident seal</td>
+            <td>Key/seed backup employs tamper-evident seal</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Backup key is encrypted</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Key/seed backup is stored with strong encryption equal/better than that used to protect primary key</td>
+            </tr>
+            
+          
+
+        </tr>
+      
+        
+        <tr>
+          
+
+          
+
+          <td rowspan=8>Key Usage</td>
+
+          
+            
+            <td>Key access requires user/pass/nth factor</td>
+            <td>Access to key/seed does not require sufficient factors of authentication to provide adequate security</td>
+            <td>Access to key/seed requires an identifier and at least 2 other factors (password, MFA token, in-person verification by guard, IP address whitelist, physical key to gain access to secured storage, countersigning organization)</td>
+            <td>Access to key/seed requires an identifier and at least 2 other factor (password, MFA token, in-person verification by guard, IP address whitelist, physical key to gain access to secured storage, countersigning organization)</td>
+            <td>Access to key/seed requires an identifier and at least 3 other factors (password, MFA token, in-person verification by guard, IP address whitelist, physical key to gain access to secured storage, countersigning organization)</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Keys are only used in a trusted environment</td>
+            <td>Keys/seeds are used on public/untrusted machines, or in environments where passwords/secrets can be disclosed</td>
+            <td>Keys/seeds are only used in trusted environments</td>
+            <td>Keys/seeds are only used in trusted environments</td>
+            <td>Keys/seeds are only used in trusted environments</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Operator reference checks</td>
+            <td>No checks are performed on key/seed holders</td>
+            <td>Key/seed holders have references checked</td>
+            <td>Key/seed holders have references checked</td>
+            <td>Key/seed holders have references checked</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Operator ID checks</td>
+            <td>ID of one or more operators is not established</td>
+            <td>Key/seed holders have identify verified</td>
+            <td>Key/seed holders have identify verified</td>
+            <td>Key/seed holders have identify verified</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Operator background checks</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Key/seed holders have undergone background checks</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Spends are verified before signing</td>
+            <td></td>
+            <td></td>
+            <td>Verification of fund destinations and amounts are performed prior to key usage</td>
+            <td>Verification of fund destinations and amounts are performed prior to key usage</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>No two keys are used on one device</td>
+            <td>Multiple keys for a single asset used on one device</td>
+            <td>No two keys belonging to the same wallet are present on any one device</td>
+            <td>No two keys belonging to the same wallet are present on any one device</td>
+            <td>No two keys belonging to the same wallet are present on any one device</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>DRBG Compliance</td>
+            <td>Signatures use a non-compliant DRBG and may be susceptible to "dirty signature" vulnerabilities</td>
+            <td>The 'k' values in digital signatures are created using a NIST SP 800-90A compliant DRBG OR The 'k' values are created deterministically according to RFC 6979
+</td>
+            <td>The 'k' values in digital signatures are created using a NIST SP 800-90A compliant DRBG OR The 'k' values are created deterministically according to RFC 6979
+</td>
+            <td>The 'k' values in digital signatures are created using a NIST SP 800-90A compliant DRBG OR The 'k' values are created deterministically according to RFC 6979
+</td>
+            </tr>
+            
+          
+
+        </tr>
+      
+        
+        <tr>
+          
+
+          
+
+          <td rowspan=2>Key Compromise Protocol (KCP)</td>
+
+          
+            
+            <td>KCP Exists</td>
+            <td>No staff has the necessary knowledge/experience/training required to rebuild the keys/wallets when necessary</td>
+            <td>An employee with knowledge/experience with the system is able to direct staff with appropriate tasks to remove the risk of compromise.</td>
+            <td>A written checklist/procedure document exists that outlines procedures for each actor to carry out in order to remove the risk of compromise. Document is maintained as warranted by changes to the system.</td>
+            <td>A written checklist/procedure document exists that outlines procedures for each actor to carry out in order to remove the risk of compromise. Document is maintained as warranted by changes to the system.</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>KCP Training + Rehearsals</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Regular training is provided to keyholders to ensure they are prepared to invoke the protocol when required.</td>
+            </tr>
+            
+          
+
+        </tr>
+      
+        
+        <tr>
+          
+
+          
+
+          <td rowspan=3>Keyholder Grant/Revoke Policies & Procedures</td>
+
+          
+            
+            <td>Grant/Revoke Procedures/Checklist</td>
+            <td>No Policy/Procedures in place</td>
+            <td>Permission changes for incoming/outgoing staff are performed by someone knowledgeable with the system</td>
+            <td>A written checklist/procedure document exists that is followed for on/offboarding. The checklist outlines every permission to grant/revoke for every role in the information system.</td>
+            <td>A written checklist/procedure document exists that is followed for on/offboarding. The checklist outlines every permission to grant/revoke for every role in the information system.</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Requests made via Authenticated Communication Channel</td>
+            <td></td>
+            <td></td>
+            <td>All grant/revoke requests are made via an Authenticated Communication Channel</td>
+            <td>All grant/revoke requests are made via an Authenticated Communication Channel</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Grant/Revoke Audit Trail</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>An audit trail records every change of access including who performed the change</td>
+            </tr>
+            
+          
+
+        </tr>
+      
+        
+        <tr>
+          
+
+          
+            
+            
+
+            <td rowspan=6>Operations</li>
+
+          
+
+          <td rowspan=1>Security Audits / Pentests</td>
+
+          
+            
+            <td>Security Audit</td>
+            <td>No proof of security</td>
+            <td>A developer who is knowledgeable about bitcoin security has assisted in the design and development of the system</td>
+            <td>A security audit has been completed by another entity who did not assist in the development of the system</td>
+            <td>External security audits are conducted regularly (at least 1/yr)</td>
+            </tr>
+            
+          
+
+        </tr>
+      
+        
+        <tr>
+          
+
+          
+
+          <td rowspan=2>Data Sanitization Policy (DSP)</td>
+
+          
+            
+            <td>DSP Exists</td>
+            <td>No sanitization is performed on decommissioned media</td>
+            <td>Staff is aware of how data remains on digital media after deletion, how to securely wipe data, and when secure wiping should be used</td>
+            <td>Destruction guidelines exist to educate/remind staff about securely deleting data data, and where they should do this within their workflow</td>
+            <td>Detailed policy covering sanitization requirements, procedures, and validation steps for every media type used by business</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Audit Trail of all media sanitization</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Audit trails are maintained for every piece of sanitized media</td>
+            </tr>
+            
+          
+
+        </tr>
+      
+        
+        <tr>
+          
+
+          
+
+          <td rowspan=1>Proof of Reserve (PoR)</td>
+
+          
+            
+            <td>Proof of Reserve Audits</td>
+            <td>No audit has been performed</td>
+            <td>A PoR audit has been completed</td>
+            <td>Regularly-scheduled release of PoR audits</td>
+            <td>The system does not hold any funds at all
+OR
+The ledger is openly viewable by all, so no PoR audits are necessary
+</td>
+            </tr>
+            
+          
+
+        </tr>
+      
+        
+        <tr>
+          
+
+          
+
+          <td rowspan=2>Audit Logs</td>
+
+          
+            
+            <td>Application Audit Logs</td>
+            <td>No audit logs</td>
+            <td>Audit logs exist for some actions within the system</td>
+            <td>Full audit trail exists of all user/admin actions</td>
+            <td>Full audit trail exists of all user/admin actions</td>
+            </tr>
+            
+          
+            
+              <tr>
+            
+            <td>Backup of Audit Logs</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Backups of audit data are performed regularly</td>
+            </tr>
+            
+          
+
+        </tr>
+      
+    </tbody>
+  </table>
+
+  </ul>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+
+          <li><a href='https://cryptoconsortium.org'><img src='/CCSS/images/C4_Color_Dark.png' class='org_logo' /> </a></li>
+
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/cryptoconsortium">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">cryptoconsortium</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/LearnMoreWithC4">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">LearnMoreWithC4</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">The CryptoCurrency Certification Consortium (C4) establishes cryptocurrency standards that help ensure a balance of openness &amp; privacy, security &amp; usability, and trust &amp; decentralization.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
