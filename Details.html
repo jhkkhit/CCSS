@@ -259,23 +259,23 @@
           </div>
         </h1>
 
-        <p>This aspect covers the creation of <a href="../Definitions#wallet">wallets</a> or <a href="../Definitions#address">addresses</a> that can receive cryptocurrencies. Wallets are created using key signing methodologies that can require a single key’s signature, multiple keys’ signatures, or a minimum number of signatures from many keys. Furthermore, wallets can be created individually (commonly referred to as JBOK wallets, or “Just a Bunch Of Keys”) or in a deterministic way that allows a set of addresses/key pairs to be created from a single master seed. Security of wallet creation is derived from the integrity of the wallet in the face of various risks such as a lost/stolen/compromised key, and the confidentiality of the wallet that would make it difficult to associate a wallet with a particular <a href="../Definitions#actor">actor</a>.</p>
+        <p>本方面涉及创建可以接收加密货币的<a href="../Definitions#wallet">钱包</a>或<a href="../Definitions#address">地址</a>。 钱包使用密钥签名方法创建，该方法可能需要单个密钥签名、多个密钥的签名或许多密钥中最少数量的签名。此外既可以单独创建钱包，通常称为JBOK钱包（Just a Bunch Of Keys），也可以使用确定的方式创建，该方式允许从单个主种子创建一组地址/密钥对。钱包创建的安全性源自面对的各种风险（例如丢失、被盗/损坏的密钥）的钱包完整性以及钱包的机密性，这将使钱包与特定的<a href =  “ ../ Definitions＃actor”>参与者关联。</p>
 
         <p>
           <h3>本方面组件包括</h3>
           <ul class="component-list">
             
-              <li>1.2.1 Unique address per transaction</li>
+              <li>1.2.1 每笔交易的唯一地址</li>
             
-              <li>1.2.2 Multiple keys for signing</li>
+              <li>1.2.2 多个用于签名的密钥</li>
             
-              <li>1.2.3 Redundant key for recovery</li>
+              <li>1.2.3 用于恢复的冗余密钥</li>
             
-              <li>1.2.4 Deterministic wallets</li>
+              <li>1.2.4 确定性钱包</li>
             
-              <li>1.2.5 Geographic distribution of keys</li>
+              <li>1.2.5 密钥的地理分布</li>
             
-              <li>1.2.6 Organizational distribution of keys</li>
+              <li>1.2.6 密钥的组织分布</li>
             
 
           </ul>
@@ -425,27 +425,27 @@
           </div>
         </h1>
 
-        <p>This aspect covers the use of cryptographic <a href="../Definitions#key">keys</a> and/or <a href="../Definitions#seed">seeds</a> to ensure they are used in a secure manner that minimizes the risks to the confidentiality of private keys and integrity of funds. This section does not cover the usage of key backups which are only used in the event the primary key is lost/damaged/inaccessible. A variety of risks are present when using keys that can lead to the loss of funds including dirty signature vulnerabilities (i.e. re-used ‘R’ values), opportunity for malware to copy or modify keys, and malicious insiders who use their authorized access to send unauthorized transactions.</p>
+        <p>此方面涵盖使用加密<a href="../Definitions#key">密钥</a>和/或<a href="../Definitions#seed">种子</a>，确保它们是以安全的方式使用，从而最大程度地降低私钥机密性和资金完整性的风险。本节不介绍密钥备份的用法，这些备份仅在主密钥丢失/损坏/不可访问的情况下使用。使用密钥时会带来各种风险，这些风险可能导致资金损失，包括肮脏签名漏洞（即重复使用的“ R”值），恶意软件复制或修改密钥的机会以及恶意内部人员使用授权访问权限发送未经授权的交易的风险。</p>
 
         <p>
-          <h3> 本方面组件包括</h3>
+          <h3>本方面组件包括</h3>
           <ul class="component-list">
             
-              <li>1.4.1 Key access requires user/pass/nth factor</li>
+              <li>1.4.1 密钥访问需要用户/通过/n个因素</li>
             
-              <li>1.4.2 Keys are only used in a trusted environment</li>
+              <li>1.4.2 密钥仅在受信环境中使用</li>
             
-              <li>1.4.3 Operator reference checks</li>
+              <li>1.4.3 操作员证明材料检查</li>
             
-              <li>1.4.4 Operator ID checks</li>
+              <li>1.4.4 操作员ID检查</li>
             
-              <li>1.4.5 Operator background checks</li>
+              <li>1.4.5 操作员背景检查</li>
             
-              <li>1.4.6 Spends are verified before signing</li>
+              <li>1.4.6 签字前先验证支出</li>
             
-              <li>1.4.7 No two keys are used on one device</li>
+              <li>1.4.7 一台设备上没有使用两个密钥</li>
             
-              <li>1.4.8 DRBG Compliance</li>
+              <li>1.4.8 DRBG合规性</li>
             
 
           </ul>
@@ -457,22 +457,22 @@
               <h2> <img class='level' src='/CCSS/images/CCSS_1_Color_Dark.png'/> </h2>
               <ul class="level-list">
                 
-                  <li><p>Access to the primary <a href="../Definitions#key">key</a>/<a href="../Definitions#seed">seed</a> requires an identifier (e.g. username, email, GUID, etc.) and at least 2 (two) other <a href="../Definitions#authentication-factor">factors of authentication</a>, which restricts access to the authorized operator. Examples of additional factors of authentication include Google Authenticator tokens, digital signatures from a private key, in-person ID verification, possession of a physical key or token, or a countersigning organization who can remotely attest to the authenticity of the key holder.</p>
+                  <li><p>要访问主<a href="../Definitions#key">密钥</a>/<a href="../Definitions#seed">种子</a>，需要使用标识符（如用户名、电子邮件、GUID等）以及至少两个其他（双）<a href="../Definitions#authentication-factor">身份验证因素</a>，从而限制了对授权操作员的访问。身份验证的其他因素的示例包括Google Authenticator令牌、私钥中的数字签名、亲自进行的ID验证、物理密钥或令牌的拥有或可以远程证明密钥持有者真实性的签名组织。</p>
 </li>
                 
-                  <li><p>All <a href="../Definitions#key">keys</a>/<a href="../Definitions#seed">seeds</a> are only used in <a href="../Definitions#trusted-environment">trusted environments</a>. This somewhat reduces the risk of unauthorized copies being made by malware, as well as mitigating the risk of storing (even inadvertently) a key on a machine, allowing it to be recovered by another user or intruder. An effective trusted environment guards against unauthorized persons learning private keys, passwords, or other sensitive information.</p>
+                  <li><p>所有<a href="../Definitions#key">密钥</a>/<a href="../Definitions#seed">种子</a>仅在<a href ="../Definitions#trusted-environment">受信环境</a>中使用。这在某种程度上降低了恶意软件制作未经授权的副本的风险，并降低了（甚至不经意地）将密钥存储在机器上，从而允许其他用户或入侵者恢复的风险。有效的可信环境可防止未经授权的人员了解私钥、密码或其他敏感信息。</p>
 </li>
                 
-                  <li><p>All <a href="../Definitions#key">key</a>/<a href="../Definitions#seed">seed</a>-holders have had their references checked prior to being trusted to hold one of the organization’s keys/seeds. This helps ensure the person is being truthful about their past and were not dismissed from prior employment for reasons that would represent a risk to the organization.</p>
+                  <li><p>所有<a href="../Definitions#key">密钥</a>/<a href="../Definitions#seed">种子</a>持有人都必须先进行证明材料检查，然后才能信任他持有组织的某一密钥/种子。这有助于确保该人员的过去是真实的，并且不会因为以前的解雇而构成对组织的风险。</p>
 </li>
                 
-                  <li><p>All <a href="../Definitions#key">key</a>/<a href="../Definitions#seed">seed</a>-holders (individuals and organizations) have undergone <a href="../Definitions#identity-verification">identity verification</a> to ensure they are who they say they are. This reduces the risks associated with impersonation and social engineering attacks which may result in access to organizational or customer funds.</p>
+                  <li><p>所有<a href="../Definitions#key">密钥</a>/<a href="../Definitions#seed">种子</a>持有人（个人和组织）都经过了<a href  =“ ../ Definitions＃identity-verification”>身份验证</a>，确保他们是他们所说的人。 这样可以减少与冒名顶替和社会工程攻击有关的风险，这些风险可能导致获得组织或客户资金。</p>
 </li>
                 
-                  <li><p>No two <a href="../Definitions#key">master keys</a>/<a href="../Definitions#seed">seeds</a> of the same <a href="../Definitions#multisig">multi-signature</a> wallet are ever present on the same device. Placing two keys of the same wallet on a single device exposes the keys to information leakage by either a malicious operator or malicious software. Ensuring every key of a wallet is used on dedicated devices reduces these risks, thereby increasing security.</p>
+                  <li><p>在同一台设备上没有两个<a href="../Definitions#key">密钥</a>/<a href="../Definitions#seed">种子</a>具有相同的<a href =“.。  / Definitions＃multisig“>多重签名</a>钱包。将同一钱包的两个密钥放在单个设备上会使密钥暴露给恶意操作员或恶意软件。确保钱包的每个密钥在专用设备上使用可以降低这些风险，从而提高安全性。</p>
 </li>
                 
-                  <li><p>Digital <a href="../Definitions#signature">signatures</a> must use a ‘k’ value that is never repeated. This can be accomplished through the use of a <a href="../Definitions#drbg">deterministic random bit generator (DRBG)</a> that is compliant with <a href="http://http://csrc.nist.gov/publications/nistpubs/800-90A/SP800-90A.pdf">NIST SP 800-90A</a>, or a deterministic scheme compatible with <a href="https://tools.ietf.org/html/rfc6979">RFC 6979</a>. Using strong sources of <a href="../Definitions#entropy">entropy</a> is required in order to prevent “dirty signature” vulnerabilities that can allow attackers to recover the private key that was used to compute the signature. A common implementation of this is to use the <a href="../Definitions#prng">pseudo-random number generator (PRNG)</a> supplied by popular operating systems, or an RFC 6979-compatible scheme.</p>
+                  <li><p>数字<a href="../Definitions#signature">签名</a>必须使用永远不会重复的“ k”值。 这可以通过使用符合<a href="http://http://csrc.nist.gov/publications/nistpubs/800-90A/SP800-90A.pdf">NIST SP 800-90A</a>的<a href="../Definitions#drbg">确定性随机位生成器（deterministic random bit generator, DRBG）</a>， 或与<a href="https://tools.ietf.org/html/rfc6979">RFC 6979</a>兼容的的确定性方案实现。必须使用强大的<a href="../Definitions#entropy">熵</a>来源，防止可能导致攻击者恢复用于计算签名的私钥的“脏签名(dirty signature)”漏洞。常见的实现方式是使用流行操作系统提供的<a href="../Definitions#prng">伪随机数生成器（pseudo-random number generator, PRNG）</a>或RFC 6979兼容方案。</p>
 </li>
                 
               </ul>
@@ -481,7 +481,7 @@
               <h2> <img class='level' src='/CCSS/images/CCSS_2_Color_Dark.png'/> </h2>
               <ul class="level-list">
                 
-                  <li><p>Verification of fund destinations and amounts is performed via a <a href="../Definitions#authenticated-communication-channel">Authenticated Communication Channel</a> prior to <a href="../Definitions#key">key</a>/<a href="../Definitions#seed">seed</a> use. This can be performed by humans before using their keys/seeds to ensure they’re sending the right amount of funds to the right <a href="../Definitions#address">addresses</a>/people/companies, or by systems that perform automated signing by checking destination addresses against whitelists and spending limits before the signature is applied. The implementation of payment protocols that provide <a href="../Definitions#signature">digitally signed</a> addresses, or the use of systems that display images and business names instead of cryptocurrency addresses greatly simplify this verification process.</p>
+                  <li><p>在使用<a href="../Definitions#key">密钥</a>/<a href="../Definitions#seed">种子</a>之前通过<a href="../Definitions#authenticated-communication-channel">已认证的通信通道</a>验证资金目的地和金额。这可以由人在使用密钥/种子之前执行，从而确保将正确数量的资金发送到正确的<a href="../Definitions#address">地址</a>/人员/公司，或者由执行自动签名的系统通过在应用签名之前对照白名单和支出限制检查目标地址实现。提供<a href="../Definitions#signature">数字签名</a>地址的支付协议的实现，或者使用显示图像和企业名称而不是加密货币地址的系统，可以大大简化这一验证过程。</p>
 </li>
                 
               </ul>
@@ -490,10 +490,10 @@
               <h2> <img class='level' src='/CCSS/images/CCSS_3_Color_Dark.png'/> </h2>
               <ul class="level-list">
                 
-                  <li><p>Access to the <a href="../Definitions#key">key</a>/<a href="../Definitions#seed">seed</a> requires an identifier (e.g. username, email, GUID, etc.) and at least 3 (three) other <a href="../Definitions#authentication-factor">factors of authentication</a>. Similar to the requirement of 2 additional factors in Level I, the other 3 factors of authentication in Level III can take any form that provides confirmation of an authorized user’s identity.</p>
+                  <li><p>要访问<a href="../Definitions#key">密钥</a>/<a href="../Definitions#seed">种子</a>，需要使用标识符（如用户名、电子邮件、GUID 等等），以及至少三个其他（三）<a href="../Definitions#authentication-factor">认证因素</a>。与级别I中2个其他因素的要求相似，级别3中的其他3个身份验证因素可以采用任何形式提供对授权用户身份的确认。</p>
 </li>
                 
-                  <li><p>All individual <a href="../Definitions#key">key</a>/<a href="../Definitions#seed">seed</a> holders have had background checks performed by law enforcement personnel or investigative firms. This ensures each key/seed holder is who they say they are and does not have evidence in their past of actions that would represent a risk to the organization if they had signing authority on organization or user funds.</p>
+                  <li><p>所有<a href="../Definitions#key">密钥</a>/<a href="../Definitions#seed">种子</a>持有人均已由执法人员或调查公司进行背景调查。这样可以确保每个密钥/种子持有者都是他们所说的人。并且，如果他们拥有组织或用户资金的签署权限，根据他们过去的言行举止，他们不会给组织带来风险。</p>
 </li>
                 
               </ul>
@@ -515,15 +515,15 @@
           </div>
         </h1>
 
-        <p>This aspect covers the existence and use of a <a href="../Definitions#key-compromise-protocol">protocol</a> that dictates the actions that must be taken in the event a cryptographic <a href="../Definitions#key">key</a>/<a href="../Definitions#seed">seed</a> or its <a href="../Definitions#actor">operator/holder</a> is believed to have become compromised. Organizations must be prepared to deal with a situation where a private key has –  even potentially –  become known, determinable or destroyed. Proper policies and procedures to govern these events decrease the risks associated with lost funds and disclosed trade secrets, and increase the availability of the information system to its users. The lack of a KCP will prevent an organization from achieving Level III certification. Examples of when a KCP would be invoked include the identification of tampering of a tamper-evident seal placed on key material, the apparent disappearance of an operator whose closest friends and family cannot identify their whereabouts, or the receipt of communication that credibly indicates an operator or key is likely at risk of being compromised. The execution of <a href="../Definitions#key-compromise-protocol">Key Compromise Protocols</a> must make use of <a href="../Definitions#authenticated-communication-channel">Authenticated Communication Channels</a> to ensure KCP messages are only sent/received by authenticated actors.</p>
+        <p>此方面涵盖了<a href="../Definitions#key-compromise-protocol">协议</a>的存在和使用，该协议规定了在加密<a href =“的情况下必须采取的措施。  ./Definitions#key“>密钥</a> / <a href="../Definitions#seed">种子</a>或其<a href="../Definitions#actor">操作员/持有人<  / a>被认为被攻陷时要采取的行动。组织必须做好准备应对私钥已知、可被确定或已被破坏的情况。适当的策略和程序管理这些事件，可以减少与资金损失和商业秘密泄露相关的风险，并提高信息系统对用户的可用性。缺少KCP会使组织无法获得III级认证。何时调用KCP的示例包括：识别对放置在关键材料上的防篡改印章的篡改、亲密的朋友和家人无法识别操作员下落的明显失踪，或收到可靠地信息表明操作员或密钥可能有泄露的风险。 <a href="../Definitions#key-compromise-protocol">密钥妥协协议</a>的执行必须使用<a href="../Definitions#authenticated-communication-channel">已认证的通信通道</a>，确保仅由经过身份验证的参与者发送/接收KCP消息。</p>
 
         <p>
           <h3>本方面组件包括</h3>
           <ul class="component-list">
             
-              <li>1.5.1 KCP Exists</li>
+              <li>1.5.1 存在KCP</li>
             
-              <li>1.5.2 KCP Training + Rehearsals</li>
+              <li>1.5.2 KCP培训和演练</li>
             
 
           </ul>
@@ -535,7 +535,7 @@
               <h2> <img class='level' src='/CCSS/images/CCSS_1_Color_Dark.png'/> </h2>
               <ul class="level-list">
                 
-                  <li><p>An inventory of all <a href="../Definitions#key">keys</a>/<a href="../Definitions#seed">seeds</a> exists, and awareness of which keys are critical to the successful operation of the information system exists within the organization. While no formal <a href="../Definitions#key-compromise-protocol">KCP</a> documents exist, there are staff members who are able to direct operators in the procedures necessary to regenerate cryptographic keys, regenerate cryptocurrency <a href="../Definitions#wallet">wallets</a>, and send funds to these newly-generated wallets in the event any operator or keys become compromised.</p>
+                  <li><p>存在所有<a href="../Definitions#key">密钥</a>/<a href="../Definitions#seed">种子</a>的清单，并且知道哪些密钥对信息系统的成功在组织内部运行很关键。 尽管没有正式的<a href="../Definitions#key-compromise-protocol"> KCP </a>文档，但仍有一些员工能够指导操作员执行必要的程序，重新生成加密密钥、重新生成加密货币<a href =“ ../ Definitions＃wallet”>钱包</a>，并在任何操作员或密钥受到威胁时将资金发送到这些新生成的钱包。</p>
 </li>
                 
               </ul>
@@ -544,7 +544,7 @@
               <h2> <img class='level' src='/CCSS/images/CCSS_2_Color_Dark.png'/> </h2>
               <ul class="level-list">
                 
-                  <li><p>A proper <a href="../Definitions#key-compromise-protocol">Key Compromise Protocol</a> outlines each specific class of key used throughout the system along with a detailed plan of dealing with its compromise including the proper use of <a href="../Definitions#authenticated-communication-channel">Authenticated Communication Channels</a> during execution. The plan identifies actors via roles and not names and includes secondary actors in the event any primary actor is unavailable to carry out the KCP.</p>
+                  <li><p>适当的<a href="../Definitions#key-compromise-protocol">密钥妥协协议</a>概述了整个系统中使用的每个特定类别的密钥，以及应对威胁的详细计划，包括在执行过程中正确使用 <a href="../Definitions#authenticated-communication-channel">已认证的通信通道</a>。该计划通过角色而不是名称识别参与者，并且包括任何主要参与者无法执行KCP的情况下的备援参与者。</p>
 </li>
                 
               </ul>
@@ -553,7 +553,7 @@
               <h2> <img class='level' src='/CCSS/images/CCSS_3_Color_Dark.png'/> </h2>
               <ul class="level-list">
                 
-                  <li><p>Tests of the <a href="../Definitions#key-compromise-protocol">Key Compromise Protocol</a> are executed regularly to confirm the viability of the procedures and to ensure staff remain trained to use them in the case of a compromise. Logs of executed tests exist which outline any/all comments of the test. Improvements identified during the tests are written back into the protocol to ensure the most effective and efficient protocol is always maintained. As changes are made to the information system, the Key Compromise Protocol is revisited to assure it is updated with any new class of key.</p>
+                  <li><p>定期执行<a href="../Definitions#key-compromise-protocol"> 密钥妥协协议</a>的测试，确认程序的可行性，并确保在发生被攻陷情况时员工使用程序的培训。存在已执行测试的日志，概述了该测试的任何/所有注释。在测试过程中确定的改进回写到协议中，确保始终保持最有效的协议。当更改信息系统时，将重新考虑“密钥妥协协议”，确保使用任何新的密钥类对协议进行更新。</p>
 </li>
                 
               </ul>
