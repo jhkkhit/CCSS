@@ -96,66 +96,66 @@
 
       
         
-          <li>Cryptographic Asset Management</li>
+          <li>密码资产管理</li>
       
-      <li><a href='#1.01'>1.01 Key / Seed Generation</a></li>
+      <li><a href='#1.01'>1.01 密钥/种子生成</a></li>
 
     
       
 
       
-      <li><a href='#1.02'>1.02 Wallet Creation</a></li>
+      <li><a href='#1.02'>1.02 钱包创建</a></li>
 
     
       
 
       
-      <li><a href='#1.03'>1.03 Key Storage</a></li>
+      <li><a href='#1.03'>1.03 密钥存储</a></li>
 
     
       
 
       
-      <li><a href='#1.04'>1.04 Key Usage</a></li>
+      <li><a href='#1.04'>1.04 密钥使用</a></li>
 
     
       
 
       
-      <li><a href='#1.05'>1.05 Key Compromise Protocol (KCP)</a></li>
+      <li><a href='#1.05'>1.05 密钥妥协协议(Key Compromise Protocol, KCP)</a></li>
 
     
       
 
       
-      <li><a href='#1.06'>1.06 Keyholder Grant/Revoke Policies & Procedures</a></li>
+      <li><a href='#1.06'>1.06 密钥持有人授权/撤销策略和步骤</a></li>
 
     
       
 
       
         
-          <li>Operations</li>
+          <li>运营</li>
       
-      <li><a href='#2.01'>2.01 Security Audits / Pentests</a></li>
+      <li><a href='#2.01'>2.01 安全审计/渗透测试</a></li>
 
     
       
 
       
-      <li><a href='#2.02'>2.02 Data Sanitization Policy (DSP)</a></li>
+      <li><a href='#2.02'>2.02 数据清理策略(Data Sanitization Policy, DSP)</a></li>
 
     
       
 
       
-      <li><a href='#2.03'>2.03 Proof of Reserve (PoR)</a></li>
+      <li><a href='#2.03'>2.03 储备证明(Proof of Reserve, PoR)</a></li>
 
     
       
 
       
-      <li><a href='#2.04'>2.04 Audit Logs</a></li>
+      <li><a href='#2.04'>2.04 审计日志</a></li>
 
     
   </ul>
@@ -164,7 +164,7 @@
     
       
       <li> <a name="1.01"></a>
-        <h1> 1.01 Key / Seed Generation
+        <h1> 1.01 密钥/种子生成
           <div class="contribution-links">
 
             <a href="https://github.com/CryptoConsortium/CCSS/edit/master/_data/aspects/101-KeySeedGeneration.yml">Edit</a>
@@ -174,19 +174,19 @@
           </div>
         </h1>
 
-        <p>This aspect covers the generation of <a href="../Definitions#key">cryptographic keys</a> and <a href="../Definitions#seed">seeds</a> that will be used within a cryptocurrency system. The secure creation of cryptographic keys and seeds requires two things to be secure: confidentiality and un-guessable numbers. Confidentiality is required to ensure that the newly created keys or seeds are not read/copied by an unintended party. Un-guessable numbers are required to ensure the newly created key cannot be guessed or determined by an unintended party. Each of the goals listed below provide assurance that the keys and/or seeds are created in a confidential and un-guessable manner.</p>
+        <p>该方面涵盖了将在加密货币系统内使用的<a href="../Definitions#key">加密密钥</a> 和<a href="../Definitions#seed">种子</a>的生成。加密密钥和种子的安全创建需要确保两件事的安全性：机密性和不可猜测的数字。需要保密以确保计划外的第三方不会读取/复制新创建的密钥或种子。需要不可猜测的数字，以确保计划外的第三方无法猜测或确定新创建的密钥。下面列出的每个目标都保证了密钥和/或种子是以机密且不可猜测的方式创建的。  </p>
 
         <p>
-          <h3> Aspect Components Include </h3>
+          <h3> 该方面 的组件包括 </h3>
           <ul class="component-list">
             
-              <li>1.1.1 Operator-created Key / Seed</li>
+              <li>1.1.1 操作员创建的密钥/种子</li>
             
-              <li>1.1.2 Creation methodology is validated</li>
+              <li>1.1.2 经验证的创建方法</li>
             
-              <li>1.1.3 DRBG Compliance</li>
+              <li>1.1.3 遵守DRBG </li>
             
-              <li>1.1.4 Entropy Pool</li>
+              <li>1.1.4 熵(Entropy)池</li>
             
 
           </ul>
@@ -198,16 +198,16 @@
               <h2> <img class='level' src='/CCSS/images/CCSS_1_Color_Dark.png'/> </h2>
               <ul class="level-list">
                 
-                  <li><p>The <a href="../Definitions#key">cryptographic keys</a> and <a href="../Definitions#seed">seeds</a> are created by the <a href="../Definitions#actor">actor</a> who will be using it. This is an attempt to protect the confidentiality of the key. Any system that requires one actor to transfer a key or seed to another actor after generating it will fail to achieve Level I, with the exception of the initial configuration of an automated signing agent.</p>
+                  <li><p><a href="../Definitions#key">加密密钥</a>和<a href="../Definitions#seed">种子</a>是由将使用它的参与者创建。这是为了保护密钥的机密性。任何需要参与者在生成密钥或种子后将密钥或种子传送给另一个参与者的系统，除非是自动签名代理的初始配置，否则都无法达到I级。 </p>
 </li>
                 
-                  <li><p>In cases where an automated agent will make use of a cryptographic key/seed, it is recommended that the administrator of that system generate the key/seed on a suitable offline system with sufficient <a href="../Definitions#entropy">entropy</a>, have this key/seed <a href="../Definitions#strong-encryption">transferred securely</a> onto the target device, and then securely deleted using CCSS-compliant data sanitization techniques to protect the confidentiality of the key/seed.</p>
+                  <li><p>如果自动代理将使用加密密钥/种子，则建议该系统的管理员在适当的离线系统上以足够的<a href="../Definitions#entropy">熵</a>生成密钥/种子，并将此密钥/种子<a href="../Definitions#strong-encryption">安全传送</a> 到目标设备上 ，然后使用符合CCSS的数据清理技术安全删除，以保护密钥/种子的机密性。</p>
 </li>
                 
-                  <li><p>Notably, transferring a cryptographic secret for backup purposes does not violate the "Same Actor" requirement, however those secrets must be transmitted and stored in a <a href="../Definitions#strong-encryption">strongly encrypted</a> format.</p>
+                  <li><p>值得注意的是，出于备份目的而传输加密机密不会违反“同一参与者”的要求，但是，这些机密必须以<a href="../Definitions#strong-encryption">强加密</a>的格式进行传输和存储。</p>
 </li>
                 
-                  <li><p>The <a href="../Definitions#key">cryptographic keys</a> and <a href="../Definitions#seed">seeds</a> are created on a system with sufficient entropy to ensure the keys are not created with any bias towards a reduced range of values, or other deterministic properties</p>
+                  <li><p><a href="../Definitions#key">加密密钥</a>和<a href="../Definitions#seed">种子</a>是在具有足够熵的系统上创建的，确保创建密钥时不会偏向于值范围缩小或其他确定性属性</p>
 </li>
                 
               </ul>
@@ -216,13 +216,13 @@
               <h2> <img class='level' src='/CCSS/images/CCSS_2_Color_Dark.png'/> </h2>
               <ul class="level-list">
                 
-                  <li><p>The <a href="../Definitions#key">key</a> or <a href="../Definitions#seed">seed</a> generation methodology is validated prior to use. Software that is used to generate seeds should be free from any features that restrict the generated seed to conform to deterministic values and features that store or transmit the generated seed to another <a href="../Definitions#actor">actor</a>, except where such features enhance the effective security of the software (e.g. <a href="../Definitions#drbg">DRBGs</a>).</p>
+                  <li><p><a href="../Definitions#key">密钥</a>或<a href="../Definitions#">种子</a>的生成方法在使用前经过验证。用于生成种子的软件在生成的种子符合确定值以及将所存储的种子存储或传输给另一个参与者的功能方面应没有任何限制，除非这些功能增强了软件的有效安全性 (如 <a href="../Definitions#drbg">DRBGs</a>).</p>
 </li>
                 
-                  <li><p>After software has been audited, a digital signature should be generated and published. The signature should be validated prior to each execution to ensure the software has not been altered since it passed its security audit.</p>
+                  <li><p>在对软件进行审核之后，应生成并发布数字签名。签名应在每次执行之前验证，以确保自通过安全审核以来该软件没有更改。</p>
 </li>
                 
-                  <li><p>In cases where keys or seeds are created without the use of software (e.g. dice, a deck of cards, or other non-digital source of <a href="../Definitions#entropy">entropy</a>), the creation methodology should be validated to ensure determinism is not present (i.e. there are no weighted dice, each card in the deck is unique, etc.).</p>
+                  <li><p>如果密钥或种子是在不使用软件的情况下创建的（如骰子、纸牌或其他非数字<a href="../Definitions#entropy">熵</a>源），则应验证创建方法，确保不存在确定性（即骰子没有重量不一致、纸牌中的每张牌都是唯一的，依此类推）。</p>
 </li>
                 
               </ul>
@@ -231,10 +231,10 @@
               <h2> <img class='level' src='/CCSS/images/CCSS_3_Color_Dark.png'/> </h2>
               <ul class="level-list">
                 
-                  <li><p>The <a href="../Definitions#key">key</a> or <a href="../Definitions#seed">seed</a> is generated using a <a href="../Definitions#drbg">Deterministic Random Bit Generator (DRBG)</a> that conforms to <a href="http://http://csrc.nist.gov/publications/nistpubs/800-90A/SP800-90A.pdf">NIST SP 800-90A</a>, and has been seeded with at least two separate cryptographically secure sources of <a href="../Definitions#entropy">entropy</a> that have been combined in a cryptographically secure manner (e.g. SHA256[UnguessableFactor1 + UnguessableFactor2]). NIST SP 800-90A is a standard that ensures that deterministically-generated numbers follow a random distribution with respect to a deterministic seed. Thus, the ability to determine these random numbers is reducible to the ability to discover the DRBG’s seed.</p>
+                  <li><p><a href="../Definitions#key">密钥</a>或<a href="../Definitions#">种子</a>是使用符合<a href="http://http://csrc.nist.gov/publications/nistpubs/800-90A/SP800-90A.pdf">NIST SP 800-90A</a>的<a href="../Definitions#drbg">确定性随机位生成器（Deterministic Random Bit Generator, DRBG）</a>生成的，并使用了至少两个单独的加密安全<a href="../Definitions#entropy">熵</a>（以加密的安全方式组合，如SHA256[UnguessableFactor1 + UnguessableFactor2]）。NIST SP 800-90A是一个标准，用于确保确定性生成的数字相对于确定性种子遵循随机分布。因此，确定这些随机数的能力会降低发现DRBG种子的能力。</p>
 </li>
                 
-                  <li><p>The Dual_EC DRBG from NIST SP 800-90A has been demonstrated to be <a href="https://en.wikipedia.org/wiki/Dual_EC_DRBG">vulnerable</a> and should not be used.</p>
+                  <li><p>NIST SP 800-90A的Dual_EC DRBG已被证明存在<a href="https://en.wikipedia.org/wiki/Dual_EC_DRBG">漏洞</a>，不应使用。</p>
 </li>
                 
                   <li><p>Optionally, instead of a NIST SP 800-90A compliant DRBG with a combination of two seeds as specified above, the key or seed may also be generated by a Non-deterministic Random Bit Generator (NRBG), or a “True Random Number Generator” (TRNG) that passes industry-standard statistical tests for randomness such as <a href="http://www.stat.fsu.edu/pub/diehard/">DIEHARD</a>, Crypt-X, or <a href="http://csrc.nist.gov/groups/ST/toolkit/rng/documentation_software.html">NIST STS</a>.</p>
